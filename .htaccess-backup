@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Chuyển hướng URL từ dạng /abc.php thành /abc
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# Đảm bảo rằng các URL không có đuôi được xử lý bởi file .php tương ứng
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^.]+)$ $1.php [L]
