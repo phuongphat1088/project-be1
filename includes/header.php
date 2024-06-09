@@ -18,7 +18,7 @@ $orderModel = new OrderModel();
 
 //get title from file name
 $fileName = basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']);
-if ($fileName == 'project-be1' || $fileName == 'index.php') {
+if ($fileName == 'project-be1' || $fileName == 'index.php'|| $fileName == '') {
   $title = 'Trang chủ';
 } elseif ($fileName == 'pets.php') {
   $title = 'Mua thú cưng';
