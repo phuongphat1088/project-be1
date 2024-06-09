@@ -9,6 +9,7 @@ include './includes/header.php';
   <!-- Banner Start -->
   <div class="banner">
     <div class="banner-title">Dịch vụ chăm sóc thú cưng</div>
+    <img class="wave-bottom" src="public/img/banner/bottom-wave.png" alt="">
   </div>
   <!-- Banner End -->
 </main>

@@ -106,7 +106,6 @@ i {
 }
 
 main {
-  margin-top: 7.5rem;
   padding-bottom: 50px;
 }
 
@@ -126,7 +125,7 @@ main {
   background-color: #212529;
   box-shadow: var(--box-shadow);
   padding: 1rem;
-  margin: 0 auto;
+  margin: 100px auto;
   border-radius: 1.5rem;
 }
 
@@ -201,6 +200,11 @@ thead {
 }
 
 /* Nav Start */
+.offcanvas-body {
+  overflow-x: unset;
+  overflow-y: unset;
+}
+
 .nav-list {
   display: flex;
   flex-wrap: wrap;
@@ -280,7 +284,6 @@ thead {
 .subnav-item:hover .subnav-link {
   background-color: var(--pet-color);
 }
-
 /* SubNav End */
 
 /* SubSubNav Start */
@@ -318,8 +321,42 @@ thead {
   color: var(--black-color);
   background-color: var(--pet-color);
 }
-
 /* SubSubNav End */
+
+/* Nav Mobile Start */
+.navbar.mobile {
+  padding: 1rem 3%;
+  background-color: var(--pet-color);
+  box-shadow: var(--box-shadow);
+}
+
+.navbar.mobile .subnav-list {
+  z-index: 1500;
+}
+
+.navbar.mobile button.navbar-toggler {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50px;
+  border: none;
+  box-shadow: var(--box-shadow);
+  background-color: var(--light-color);
+  box-shadow: var(--box-shadow);
+  font-size: 2rem;
+}
+
+.navbar.mobile button.navbar-toggler:active,
+.navbar.mobile button.navbar-toggler:focus {
+  background-color: var(--light-color);
+  box-shadow: var(--box-shadow);
+}
+
+
+.navbar.mobile .navbar-toggler-icon {
+  width: 2rem;
+  height: 2rem;
+}
+/* Nav Mobile Start */
 
 /* Serch Box Start */
 .serch-box-input:focus {
@@ -532,6 +569,7 @@ h1.site-title {
   margin: 50px 0 10px;
   margin-bottom: 20px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 h1.site-title i {
@@ -1089,3 +1127,20 @@ h1.site-title i {
 }
 
 /* Footer End */
+
+@media (min-width: 1190px) {
+  header.header {
+    display: flex;
+  }
+  .navbar.mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1190px) {
+  header.header {
+    display: none;
+  }
+  .navbar.mobile {
+  }
+}
